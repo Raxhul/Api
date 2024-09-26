@@ -19,7 +19,8 @@ export  const push =  async (req , res)=>{
 
      const nmovi = new Movie({
        
-         title:req.body.title,
+         name:req.body.name,
+        link:req.body.link,
         age:req.body.age
      });
 

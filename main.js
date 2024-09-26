@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 connnect();
 
  
-app.use("/movi",route);
+app.use("/user",route);
 
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`)
