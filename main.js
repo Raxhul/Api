@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 app.get('/', (req, res) => {
-  res.send('This site is under raghul control')
+  res.send('Hello World!')
 });
 
 connnect();
