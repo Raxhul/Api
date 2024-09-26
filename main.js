@@ -11,13 +11,13 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('This site is under raghul control')
 });
 
 connnect();
 
  
-app.use("/user",route);
+app.use("/movi",route);
 
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`)

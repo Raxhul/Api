@@ -2,23 +2,18 @@ import { Schema, model } from "mongoose";
 
 // the tembleate
  const schema = new Schema({
-    name :{
+    title :{
            type: String,
            required:true,
            // unique it refer's to the title should not repeted 
            unique:true
            
-        },
-         email :{
-         type: String,
-         required:true,
-        },
-
-         password:{
+    },
+    age :{
         type: String,
         required:true,
  },
  });
 
  //to use this timplate outside the folder 
- export const Movie =  model("User",schema)
+ export const Movie =  model("Movie",schema)

@@ -19,9 +19,8 @@ export  const push =  async (req , res)=>{
 
      const nmovi = new Movie({
        
-         name:req.body.name,
-        email:req.body.email,
-        password:req.body.password
+         title:req.body.title,
+        age:req.body.age
      });
 
      try {
@@ -31,7 +30,7 @@ export  const push =  async (req , res)=>{
         
      } catch (error) {
         console.log("check the code ");
-        return res.status(400).json({messpassword:error.messpassword});
+        return res.status(400).json({message:error.message});
      }
 };
 
@@ -39,9 +38,9 @@ export  const push =  async (req , res)=>{
 export const pop =  async (req , res)=>{
     try {
         await Movie.deleteOne({_id:req.params.id})
-        res.json({messpassword:"movie deleted "})
+        res.json({message:"movie deleted "})
     } catch (error) {
-        res.status(400).json({messpassword:error.messpassword})
+        res.status(400).json({message:error.message})
     }
  
 };
@@ -54,7 +53,7 @@ export const update = async (req , res)=>{
             {_id:req.params.id},
             {
             title:req.body.title,
-            password:req.body.password
+            age:req.body.age
          },{
              new:true,
          }
@@ -64,7 +63,7 @@ export const update = async (req , res)=>{
         
     } catch (error) {
         console.log("there is a issue in update ");
-        res.status(400).json({messpassword:error.messpassword});
+        res.status(400).json({message:error.message});
     }
  
 };
